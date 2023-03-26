@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage {
 
+    //private final String URL = "http://localhost:8080/parabank";
     private final String URL = "https://parabank.parasoft.com";
 
     private final By textfieldUsername = By.name("username");

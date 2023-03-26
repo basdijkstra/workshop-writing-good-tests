@@ -1,6 +1,7 @@
 package solutions.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -41,5 +42,15 @@ public class BasePage {
     public void selectMenuItem(String linkText) {
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText(linkText)));
         driver.findElement(By.linkText(linkText)).click();
+    }
+
+    protected boolean isDisplayed(By locator) {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return true;
+        }
+        catch (TimeoutException te) {
+            return false;
+        }
     }
 }

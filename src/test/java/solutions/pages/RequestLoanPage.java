@@ -10,6 +10,8 @@ public class RequestLoanPage extends BasePage {
     private final By dropdownFromAccountId = By.id("fromAccountId");
     private final By buttonSubmitLoanRequest = By.xpath("//input[@value='Apply Now']");
     private final By textlabelLoanRequestSubmissionResult = By.id("loanStatus");
+    private final By textlabelLoanProviderName = By.id("loanProviderName");
+    private final By textlabelInternalErrorHasOccurred = By.xpath("//p[contains(text(),'An internal error has occurred and has been logged.')]");
 
     public RequestLoanPage(WebDriver driver) {
         super(driver);
@@ -24,5 +26,13 @@ public class RequestLoanPage extends BasePage {
 
     public String getLoanApplicationResult() {
         return getElementText(textlabelLoanRequestSubmissionResult);
+    }
+
+    public String getLoanProviderName() {
+        return getElementText(textlabelLoanProviderName);
+    }
+
+    public boolean internalErrorMessageIsVisible() {
+        return isDisplayed(textlabelInternalErrorHasOccurred);
     }
 }

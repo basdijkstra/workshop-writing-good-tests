@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/",
+    "bodyPatterns" : [
+      {
+        "matchesXPath" : "//*[local-name()='requestLoan']//loanAmount[text()='6000']"
+      }
+    ]
+  },
+  "response": {
+    "fault": "MALFORMED_RESPONSE_CHUNK"
+  }
+}

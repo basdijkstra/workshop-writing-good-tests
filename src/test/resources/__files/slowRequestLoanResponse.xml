@@ -1,0 +1,15 @@
+<SOAP-ENV:Envelope
+        xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SOAP-ENV:Body>
+        <requestLoanResponse
+                xmlns="http://service.parabank.parasoft.com/">
+            <loanResponse>
+                <loanProviderName
+                        xmlns="">Sorry that took me so long...</loanProviderName>
+                <approved xmlns="">true</approved>
+            </loanResponse>
+        </requestLoanResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

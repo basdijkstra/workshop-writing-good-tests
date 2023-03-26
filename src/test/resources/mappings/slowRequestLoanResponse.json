@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/",
+    "bodyPatterns" : [
+      {
+        "matchesXPath" : "//*[local-name()='requestLoan']//loanAmount[text()='9000']"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 5000,
+    "bodyFileName": "slowRequestLoanResponse.xml"
+  }
+}

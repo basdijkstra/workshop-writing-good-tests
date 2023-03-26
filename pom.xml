@@ -15,6 +15,7 @@
         <junit.version>5.9.2</junit.version>
         <selenium.webdriver.version>4.8.1</selenium.webdriver.version>
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
+        <wiremock.version>2.35.0</wiremock.version>
         <maven.surefire.plugin.version>3.0.0-M9</maven.surefire.plugin.version>
     </properties>
 
@@ -47,6 +48,12 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-jre8</artifactId>
+            <version>${wiremock.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

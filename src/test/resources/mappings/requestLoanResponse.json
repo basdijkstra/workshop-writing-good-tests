@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/",
+    "bodyPatterns" : [
+      {
+        "matchesXPath" : "//*[local-name()='requestLoan']//loanAmount[text()='10000']"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "requestLoanResponse.xml"
+  }
+}
